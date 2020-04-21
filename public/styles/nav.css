@@ -1,0 +1,19 @@
+nav {
+  position: fixed;
+  height: 120px;
+  width: 100%;
+  z-index: 1;
+  background-color: #4056A1;
+  color: #FFF;
+}
+nav > span {
+  font-family: Bungee, sans-serif;
+  position: absolute;
+  top: 1.5em;
+  left: 1.5em;
+}
+.new-tweet-link {
+  position: absolute;
+  bottom: 1.5em;
+  right: 1.5em;
+}
