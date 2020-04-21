@@ -31,7 +31,9 @@ output {
   bottom: -2px;
   font-family: Bungee; 
 }
-
+textarea:focus {
+  outline: none;
+}
 .limit-exceeded {
   color: red;
 }
