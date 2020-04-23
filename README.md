@@ -46,3 +46,4 @@ The following functionalities exist:
 * Resize window
 * click to display tweet form input
 * submit tweet and see it loaded
+* appropriate error handling
