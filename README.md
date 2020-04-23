@@ -1,17 +1,48 @@
-# Tweeter Project
+# TinyApp Project
 
-Tweeter is a simple, single-page Twitter clone.
+A Simple single page AJAX-based Twitter clone that uses jQuery, HTML5 and css.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+## Purpose
+
+**_BEWARE:_ This library was published for learning purposes. It is _not_ intended for use in production-grade software.**
+
+This project was created and published by me as part of my learnings at Lighthouse Labs. 
+A mini project to introduce front end javascript along with resposive design
+
+## Final Product
+
+!["Screenshot of Full window layout"](https://github.com/amrhamada/tweeter/blob/master/docs/full-window-layout.png?raw=true)
+!["Screenshot of small window view"](https://github.com/amrhamada/tweeter/blob/master/docs/small-window%20-layout.png?raw=true)
+!["Screenshot of new-tweet"](https://github.com/amrhamada/tweeter/blob/master/docs/new-tweet.png?raw=true)
+!["Screenshot of go top button"](https://github.com/amrhamada/tweeter/blob/master/docs/go-top-button.png?raw=true)
+## Dependencies
+
+
+- Node.js
+- Express
+- Chance
 
 ## Getting Started
 
-1. Fork this repository, then clone your fork of this repository.
-2. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+- Install all dependencies (using the `npm install` command).
+- Run the development web server using the `node index.js` command.
 
-## Dependencies
+## Usage
 
-- Express
-- Node 5.10.x or above
+**Install it:**
+
+`npm install @amrhamada/tweeter`
+
+**Run it:**
+
+npm run local
+  Runs on localhost port 8080
+
+
+## Documentation
+
+The following functionalities exist:
+
+* Resize window
+* click to display tweet form input
+* submit tweet and see it loaded
