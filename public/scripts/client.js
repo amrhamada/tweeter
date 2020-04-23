@@ -9,8 +9,7 @@ const textLengthError = '❌ Character Limit exceeded! ❌'
 const emptyError = '❌ Empty Tweet! ❌';
 
 const createTweetElement = function(tweet) {
-  // const content = 
-  // console.log(content);
+  
   const markup = `
     <article>
       <header>
@@ -47,31 +46,46 @@ const renderTweets = (tweets) =>{
 };
 
 $(document).ready(function() {
+
+  //Get the button
+  const $top = $('#go-top')
+
+// When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      $top.css('display' , () => "block");
+    } else {
+      $top.css('display' , () => "none");
+    }
+  }
+  
   $('form').submit( function(event) {
     event.preventDefault();
     if (!$('#tweet-text').val()) {
       $('#error').text(emptyError).slideDown();
-      setTimeout(()=> $('#error').text('').css('display', () => 'none'), 5000);
+      setTimeout(()=> $('#error').text('').slideUp(), 5000);
       return;
     } 
     if ($('output').val() < 0) {
       $('#error').text(textLengthError).slideDown();
       return;
     }
-    $('#error').text('').css('display', () => 'none')
-    // let tweet = $('#tweet-text').val();
-    // console.log(tweet); 
-    // tweet = $('#tweet-text').text(tweet);
-    // console.log(tweet);
-    // console.log($('#tweet-text').text($('#tweet-text').val()).val());
+    $('#error').text('').slideUp();
+
     const tweet = $('#tweet-text').serialize();
     $.ajax({
       url: '/tweets',
       type: 'POST',
       data: tweet
     }).then( function(response) {
-      loadTweets()
-    })
+      loadTweets();
+      $('.new-tweet').slideUp();
+    }).catch(error => {
+      $('#error').text(' ❌Failed to post please try again❌').slideDown()
+      return;
+    });
   }); 
 
   const loadTweets = () => {
@@ -88,6 +102,15 @@ $(document).ready(function() {
   loadTweets();
 });
 
-
+const showNewTweet = () => {
+  $newTweet = $('.new-tweet')
+  if ($newTweet.css('display') === 'none') {
+    $newTweet.slideDown();
+    $('.new-tweet output').val(140);
+    $('.new-tweet textarea').focus();
+  } else {
+    $newTweet.slideUp();
+  }
+};
  
   
