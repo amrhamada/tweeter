@@ -29,7 +29,7 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <p class= "new-tweet-link">Write a new tweet</p>
+      <p class= "new-tweet-link" onclick="showNewTweet()"><b>Write</b> a new tweet</p>
       <span>tweeter</span>
     </nav>
     <header>
@@ -37,10 +37,10 @@
           <img src="/images/profile-hex.png"> 
       </div>
       <br>
-      <div>
-          <h2>Dania Janoudy</h2>
+      <div id="user-name">
+          <h2 >Amro Abdelaziz</h2>
       </div>
-  </header>
+    </header>
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
@@ -55,6 +55,7 @@
       <section id = "tweet-list">
 
       </section>
+      <a id='go-top' href='#top'><img src='./images/go-top.jpg' alt="Go to top of page" title="Go Top"></a>
     </main>
   </body>
 </html>
