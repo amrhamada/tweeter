@@ -24,9 +24,22 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+ 
  .container {
-   position: relative;
-   top: 120px;
-   width: 90%;
-   left: 5%;
+  position: relative;
+  width: 90vw;
+  left: 5%;
+}
+
+ @media only screen and (min-width: 1024px) {
+
+  .container {
+    /* display: inline; */
+    float:left;
+    width:52%;
+    top: 160px;
+    right: 5%;
+    margin-left:5%;
+
  }
+}

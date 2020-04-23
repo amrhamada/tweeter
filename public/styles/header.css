@@ -1,9 +1,35 @@
 body > header {
-  height: 400px;
+  color: white;
+  height: auto;
   width:100%;
   position: relative; 
-  top:120px; 
+  /* top:120px;  */
   background-color: #d8991f;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
   text-align: center;
+}
+
+#user-name{
+  position: relative;
+  top :-25px;
+  margin: 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  body > header {
+    height: 400px;
+    position: relative;
+    float :left;
+    width: 33.3%;
+    height: 35vh;
+    top: 180px;
+    left:5%;
+  }
+
+  div > img {
+    position: relative;
+    top:20px;
+    height: auto;
+    width:auto;
+  }
 }

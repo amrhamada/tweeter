@@ -1,19 +1,64 @@
+
 nav {
-  position: fixed;
-  height: 120px;
-  width: 100%;
-  z-index: 1;
-  background-color: #4056A1;
-  color: #FFF;
+  position: relative;
+  background-color: #d8991f;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  text-align: center;
+  height: 50px;
+  color:white;
 }
+
 nav > span {
   font-family: Bungee, sans-serif;
-  position: absolute;
-  top: 1.5em;
+  position: relative;
+  float:left;
   left: 1.5em;
+  top: 1em;
 }
 .new-tweet-link {
-  position: absolute;
-  bottom: 1.5em;
+  position: relative;
   right: 1.5em;
+  float:right;
+  font-size: 1rem;
+  top: 1em;
+}
+.new-tweet-link:hover{
+  cursor: pointer;
+}
+
+#go-top {
+  position: fixed;
+  bottom: 3em;
+  right:.8em;
+  display: none;
+}
+#go-top img{
+  height: 50px;
+  width: auto;
+  border-radius: 2em;
+  
+}
+@media only screen and (min-width: 1024px) {
+  nav {
+    position: fixed;
+    height: 120px;
+    width: 100vw;
+    z-index: 1;
+    background-color: #4056A1;
+    color: #FFF;
+    display: block;
+    background-image: none;
+  }
+  nav > span {
+    font-family: Bungee, sans-serif;
+    position: absolute;
+    top: 1.5em;
+    left: 1.5em;
+  }
+  .new-tweet-link {
+    position: absolute;
+    bottom: 3em;
+    right: 1.5em;
+    font-size: 1rem;
+  }
 }

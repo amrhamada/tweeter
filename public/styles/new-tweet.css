@@ -1,6 +1,6 @@
 .new-tweet{
   position: relative;
-  /* border: 2px red solid; */
+  display:none;
 }
 
 #error{
@@ -8,15 +8,9 @@
   font-size: 15px;
   border: 2px red solid;
   text-align: center;
-  /* height: 0;
-  max-height: 0; */
   display:none;  
 }
 
-/* .new-tweet:target #error{
-  height:20px;
-  display: block; */
-/* } */
 .new-tweet label {
   display: block;
   font-size: 20px;
@@ -52,4 +46,10 @@ textarea:focus {
 
 .limit-exceeded{
   color: red;
+}
+
+@media only screen and (min-width: 1024px) {
+  .new-tweet{
+    display:block;
+  }
 }
