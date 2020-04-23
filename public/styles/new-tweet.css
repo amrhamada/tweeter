@@ -1,6 +1,22 @@
 .new-tweet{
   position: relative;
+  /* border: 2px red solid; */
 }
+
+#error{
+  color: red;
+  font-size: 15px;
+  border: 2px red solid;
+  text-align: center;
+  /* height: 0;
+  max-height: 0; */
+  display:none;  
+}
+
+/* .new-tweet:target #error{
+  height:20px;
+  display: block; */
+/* } */
 .new-tweet label {
   display: block;
   font-size: 20px;
@@ -24,7 +40,6 @@ button {
   background-color: #37498A;
 }
 output {
-  align: right;
   font-size: 20px;
   position: absolute;
   right: 5px;
@@ -34,6 +49,7 @@ output {
 textarea:focus {
   outline: none;
 }
-.limit-exceeded {
+
+.limit-exceeded{
   color: red;
 }
