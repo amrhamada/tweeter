@@ -25,14 +25,8 @@ const createTweetElement = function(tweet) {
         <p>10 Days Ago</p>
       </footer>
     </article>`;
-    // console.log(markup.split("\n"));
-    return markup;
-
+  return markup;
 };
-
-
-
-// $(document).ready(function() {
 
 const renderTweets = (tweets) =>{
   let markup = [];
@@ -42,16 +36,17 @@ const renderTweets = (tweets) =>{
   $('#tweet-list').empty();
   $('#tweet-list').append(markup.join(""));
     
-  
 };
 
 $(document).ready(function() {
 
   //Get the button
-  const $top = $('#go-top')
+  const $top = $('#go-top');
 
-// When the user scrolls down 20px from the top of the document, show the button
-  window.onscroll = function() {scrollFunction()};
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() { 
+    scrollFunction()
+  };
 
   function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -59,7 +54,7 @@ $(document).ready(function() {
     } else {
       $top.css('display' , () => "none");
     }
-  }
+  };
   
   $('form').submit( function(event) {
     event.preventDefault();
@@ -79,14 +74,14 @@ $(document).ready(function() {
       url: '/tweets',
       type: 'POST',
       data: tweet
-    }).then( function(response) {
+    }).then( function() {
       loadTweets();
       $('.new-tweet').slideUp();
     }).catch(error => {
       $('#error').text(' ❌Failed to post please try again❌').slideDown()
       return;
     });
-  }); 
+  });
 
   const loadTweets = () => {
     $.ajax({
@@ -97,13 +92,13 @@ $(document).ready(function() {
       renderTweets(response);
       
     });
-  }
+  };
 
   loadTweets();
 });
 
 const showNewTweet = () => {
-  $newTweet = $('.new-tweet')
+  $newTweet = $('.new-tweet');
   if ($newTweet.css('display') === 'none') {
     $newTweet.slideDown();
     $('.new-tweet output').val(140);
