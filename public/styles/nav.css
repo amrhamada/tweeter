@@ -44,8 +44,7 @@ nav > span {
     height: 120px;
     width: 100vw;
     z-index: 1;
-    background-color: #4056A1;
-    color: #FFF;
+    background-color: rgb(25, 50, 133);
     display: block;
     background-image: none;
   }
